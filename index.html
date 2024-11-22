@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundo Motors</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/estyle.css">
+
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">Mundo Motors</a>
+            <nav>
+                <ul>
+                    <li><a href="pgn/designcarros.html">Autos</a></li>
+                    <li><a href="pgn/designmotos.html">Motos</a></li>
+                    <li><a href="pgn/indexx.html">Lanzamientos</a></li>
+                    <li><a href="#" class="iniciar-sesion">Iniciar sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+  
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>LA REVISTA DE <a class="tr">MOTORES</a> QUE TE MANTIENE AL DÍA</h1>
+            <p>Descubre las últimas novedades del mundo automotor</p>
+        </div>
+    </section>
+
+
+
+    <div class="brands-outer-container">
+        <div class="brands-container" id="brandSlider">
+          
+          <img class="brand-logo" src="img/imges2/honda.png" alt="Honda">
+          <img class="brand-logo" src="img/imges2/ducati (1).png" alt="Ducati">
+          <img class="brand-logo" src="img/imges2/bmw.png" alt="BMW">
+          <img class="brand-logo" src="img/imges2/bugatti.png" alt="Bugatti">
+          <img class="brand-logo" src="img/imges2/lamborghini.png" alt="Lamborghini">
+          <img class="brand-logo" src="img/imges2/rollroyce logo.png" alt="Rolls Royce">
+          <img class="brand-logo" src="img/imges2/porsche.png" alt="Porsche">
+          <img class="brand-logo" src="img/imges2/ferrari (1).png" alt="Ferrari">
+          <img class="brand-logo" src="img/imges2/ducati (1).png" alt="Ducati">
+          <img class="brand-logo" src="img/imges2/yamaha.png" alt="Yamaha">
+          <img class="brand-logo" src="img/imges2/suzuki.png" alt="suzuki">
+          <img class="brand-logo" src="img/imges2/koenihsegr.png" alt="koenihsegr">
+          <img class="brand-logo" src="img/imges2/nissan.png" alt="nissan">
+          <img class="brand-logo" src="img/imges2/benelli.png" alt="Benelli">
+          <img class="brand-logo" src="img/imges2/pagani logo.png" alt="Pagani">
+        </div>
+        <button class="scroll-button prev" id="prevBtn">‹</button>
+        <button class="scroll-button next" id="nextBtn">›</button>
+      </div>
+    
+      <script>
+        const slider = document.getElementById('brandSlider');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        let currentScroll = 0;
+        
+        function updateNavigation() {
+          const containerWidth = slider.parentElement.clientWidth;
+          const maxScroll = slider.scrollWidth - containerWidth + 40; // Ajuste para el padding
+          
+          // Actualizar visibilidad de botones
+          prevBtn.classList.toggle('hidden', currentScroll <= 0);
+          nextBtn.classList.toggle('hidden', currentScroll >= maxScroll);
+        }
+    
+        function scrollSlider(direction) {
+          const containerWidth = slider.parentElement.clientWidth;
+          const maxScroll = slider.scrollWidth - containerWidth + 40; // Ajuste para el padding
+          
+          // Calcular el siguiente desplazamiento
+          currentScroll += direction * (containerWidth / 2);
+          
+          // Asegurarse de que no nos pasemos de los límites
+          currentScroll = Math.max(0, Math.min(currentScroll, maxScroll));
+          
+          // Aplicar el desplazamiento
+          slider.style.transform = `translateX(-${currentScroll}px)`;
+          
+          // Actualizar botones
+          updateNavigation();
+        }
+    
+        // Agregar event listeners a los botones
+        prevBtn.addEventListener('click', () => scrollSlider(-1));
+        nextBtn.addEventListener('click', () => scrollSlider(1));
+    
+        // Navegación con teclado
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowLeft') scrollSlider(-1);
+          if (e.key === 'ArrowRight') scrollSlider(1);
+        });
+    
+        // Inicializar estado de los botones
+        updateNavigation();
+    
+        // Actualizar navegación cuando la ventana cambie de tamaño
+        window.addEventListener('resize', updateNavigation);
+      </script>
+    
+    <section class="latest-releases">
+        <div class="latest-releases">
+            <div class="section-title">Últimos Lanzamientos</div>
+            
+            <div class="releases-container">
+              <button class="carousel-button prev">←</button>
+              <button class="carousel-button next">→</button>
+              
+              <div class="releases-track">
+                <!-- Card 1 -->
+          <div class="release-card">
+            <div class="img">
+              <img class="release-image" src="img/imges2/ferrari.png" alt="LOTUS EMIRA TURBO SE">
+            </div>
+            
+            <div class="release-info">
+              <div class="release-date">Octubre 11, 2024</div>
+              <div class="release-title">LOTUS EMIRA TURBO SE</div>
+              <div class="release-description">EL MÁS POTENTE DE LA FAMILIA</div>
+            </div>
+          </div>
+        
+          <!-- Card 2 -->
+          <div class="release-card">
+            <div class="img">
+              <img class="release-image" src="img/imges2/rolls royce.png" alt="ROLLS ROYCE GHOST SERIES II">
+            </div>
+           
+            <div class="release-info">
+              <div class="release-date">Octubre 10, 2024</div>
+              <div class="release-title">ROLLS ROYCE GHOST SERIES II</div>
+              <div class="release-description">UNA ATREVIDA EXPRESIÓN DE LUJO Y PODER</div>
+            </div>
+          </div>
+        
+          <!-- Card 3 -->
+          <div class="release-card">
+            <div class="img">
+              <img class="release-image" src="img/imges2/ducati1.png" alt="DUCATI MULTISTRADA V4 RS">
+            </div>
+            
+            <div class="release-info">
+              <div class="release-date">Octubre 9, 2024</div>
+              <div class="release-title">DUCATI MULTISTRADA V4 RS</div>
+              <div class="release-description">LA PERFECTA COMBINACIÓN DE PODER Y CLASE</div>
+            </div>
+          </div>
+        
+          <!-- Card 4 -->
+          <div class="release-card">
+            <div class="img">
+              
+            <img class="release-image" src="img/imges2/kawasaki.png" alt="KAWASAKI NINJA ZX-6R 2024">
+            </div>
+            
+            <div class="release-info">
+              <div class="release-date">Octubre 8, 2024</div>
+              <div class="release-title">KAWASAKI NINJA ZX-6R 2024</div>
+              <div class="release-description">SUPERA TODOS LOS LÍMITES CON UN RENDIMIENTO INIGUALABLE</div>
+            </div>
+          </div>
+        
+          <!-- Más imágenes -->
+          <div class="release-card">
+            <div class="img">
+              <img class="release-image" src="img/imges2/TESLA ROADSTER.png" alt="TESLA ROADSTER">
+            </div>
+            >
+            <div class="release-info">
+              <div class="release-date">Octubre 7, 2024</div>
+              <div class="release-title">TESLA ROADSTER</div>
+              <div class="release-description">EL DEPORTIVO MÁS RÁPIDO Y ELEGANTE</div>
+            </div>
+          </div>
+        
+          <div class="release-card">
+            <div class="img">
+              <img class="release-image" src="img/imges2/FERRARI PUROSANGUE.jpg" alt="FERRARI PUROSANGUE">
+            </div>
+            
+            <div class="release-info">
+              <div class="release-date">Octubre 6, 2024</div>
+              <div class="release-title">FERRARI PUROSANGUE</div>
+              <div class="release-description">EL PRIMER SUV DE LA CASA DE MARANELLO</div>
+            </div>
+          </div>
+        
+          <div class="release-card">
+            <div class="img">
+              <img class="release-image" src="img/imges2/LAMBORGHINI REVUELTO.png" alt="LAMBORGHINI REVUELTO">
+            </div>
+            
+            <div class="release-info">
+              <div class="release-date">Octubre 5, 2024</div>
+              <div class="release-title">LAMBORGHINI REVUELTO</div>
+              <div class="release-description">INNOVACIÓN HÍBRIDA CON ADN LAMBORGHINI</div>
+            </div>
+          </div>
+        
+          <div class="release-card">
+            <div class="img">
+              <img class="release-image" src="img/imges2/PORSCHE 911 DAKAR.png" alt="PORSCHE 911 DAKAR">
+            </div>
+            
+            <div class="release-info">
+              <div class="release-date">Octubre 4, 2024</div>
+              <div class="release-title">PORSCHE 911 DAKAR</div>
+              <div class="release-description">REDEFINIENDO EL RENDIMIENTO TODO TERRENO</div>
+            </div>
+          </div>
+        
+          <div class="release-card">
+            <div class="img">
+              <img class="release-image" src="img/imges2/BMW XM LABEL RED.png" alt="BMW XM LABEL RED">
+            </div>
+            
+            <div class="release-info">
+              <div class="release-date">Octubre 3, 2024</div>
+              <div class="release-title">BMW XM LABEL RED</div>
+              <div class="release-description">EL SUV MÁS POTENTE DE BMW</div>
+            </div>
+          </div>
+        
+          <div class="release-card">
+            <div class="img">
+              <img class="release-image" src="img/imges2/MERCEDES-AMG GT 63 S E PERFORMANCE.png" alt="MERCEDES-AMG GT 63 S E PERFORMANCE">
+            </div>
+            
+            <div class="release-info">
+              <div class="release-date">Octubre 2, 2024</div>
+              <div class="release-title">MERCEDES-AMG GT 63 S E PERFORMANCE</div>
+              <div class="release-description">UN SUPERSEDÁN HÍBRIDO CON ADN DEPORTIVO</div>
+            </div>
+          </div>
+        
+              </div>
+            </div>
+        
+            <div class="dots-navigation">
+              <div class="dot active"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+        
+            <div class="footer-text">
+              ÚNETE Y ENTÉRATE DE LA NUEVAS TENDENCIAS Y TODO LO RELACIONADO CON EL MUNDO DE LOS MOTORES
+            </div>
+          </div>
+        
+          <script>
+            document.addEventListener('DOMContentLoaded', () => {
+              const track = document.querySelector('.releases-track');
+              const cards = document.querySelectorAll('.release-card');
+              const dots = document.querySelectorAll('.dot');
+              const prevButton = document.querySelector('.carousel-button.prev');
+              const nextButton = document.querySelector('.carousel-button.next');
+              
+              let currentIndex = 0;
+              const cardWidth = 320; // card width + gap
+              
+              function updateCarousel() {
+                track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+                
+                // Update dots
+                dots.forEach((dot, index) => {
+                  dot.classList.toggle('active', index === currentIndex);
+                });
+                
+                // Update button states
+                prevButton.style.opacity = currentIndex === 0 ? '0.5' : '1';
+                nextButton.style.opacity = currentIndex === cards.length - 1 ? '0.5' : '1';
+              }
+              
+              nextButton.addEventListener('click', () => {
+                if (currentIndex < cards.length - 1) {
+                  currentIndex++;
+                  updateCarousel();
+                }
+              });
+              
+              prevButton.addEventListener('click', () => {
+                if (currentIndex > 0) {
+                  currentIndex--;
+                  updateCarousel();
+                }
+              });
+              
+              dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                  currentIndex = index;
+                  updateCarousel();
+                });
+              });
+              
+              // Touch events for mobile swipe
+              let touchStartX = 0;
+              let touchEndX = 0;
+              
+              track.addEventListener('touchstart', (e) => {
+                touchStartX = e.touches[0].clientX;
+              });
+              
+              track.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].clientX;
+                handleSwipe();
+              });
+              
+              function handleSwipe() {
+                const swipeDistance = touchEndX - touchStartX;
+                if (Math.abs(swipeDistance) > 50) { // Minimum swipe distance
+                  if (swipeDistance > 0 && currentIndex > 0) {
+                    currentIndex--;
+                  } else if (swipeDistance < 0 && currentIndex < cards.length - 1) {
+                    currentIndex++;
+                  }
+                  updateCarousel();
+                }
+              }
+              
+              // Initial setup
+              updateCarousel();
+            });
+          </script>
+    </section>
+    <div class="cta-buttons">
+        <a href="#" class="cta-button"><img src="img/imges2/alta voz P.png">SU PRODUCTO EN NUESTRA WEB</a>
+        <a href="#" class="cta-button"><img src="img/imges2/img meil (1).png">LAS NOTICIAS DE SU DEL SECTOR EN SU MAIL</a>
+    </div>
+
+
+    <footer class="footer">
+      <p>© Copyright 2024. Todos los derechos reservados</p>
+      <div class="social-icons">
+          <img src="img/imges2/🦆 icon _Facebook_.png" alt="Facebook" class="social-icon">
+          <img src="img/imges2/🦆 icon _Instagram_.png" alt="Instagram" class="social-icon">
+          <img src="img/imges2/Group.png" alt="YouTube" class="social-icon" class="social-icon">
+      </div>
+  </footer>
+
+</body>
+</html>

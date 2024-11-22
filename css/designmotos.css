@@ -1,0 +1,372 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    box-sizing: border-box;
+  }
+  
+.logo {
+  display: flex; 
+  align-items: center; 
+  font-family: Arial, sans-serif;
+  line-height: 1; 
+}
+
+
+.shared-m {
+  font-size: 100px; 
+  font-weight: bold; 
+  font-style: italic; 
+  color: hsl(0, 100%, 50%); 
+  text-shadow: -1px -1px 2px rgb(255, 0, 0), 1px -1px 2px rgb(255, 0, 0), -1px 1px 2px rgb(255, 18, 18), 1px 1px 2px black; /* Contorno negro más fino */
+  margin-right: 10px; 
+}
+
+/* Contenedor del texto después de la M */
+.logo-text {
+  display: flex;
+  flex-direction: column; 
+  margin-left: -5px; 
+}
+
+/* Estilo para "Mundo" */
+.logo-mundo {
+  font-size: 40px; 
+  font-weight: normal;
+  color: red; 
+  margin-top: -5px; 
+}
+
+/* Estilo para "MOTORS" */
+.logo-motors {
+  font-size: 50px; 
+  font-weight: bold; 
+  font-style: italic; 
+  text-transform: uppercase; 
+  color: red; 
+  text-shadow: -1px -1px 2px rgb(247, 7, 7), 1px -1px 2px rgb(250, 7, 7), -1px 1px 2px rgb(255, 0, 0), 1px 1px 2px rgb(235, 6, 6); /* Contorno negro más fino */
+  margin-top: -10px; 
+}
+
+
+  *, *::before, *::after {
+    box-sizing: inherit;
+  }
+  
+  /* Cabecera */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(255, 2, 2, 0.986);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d32f2f;
+  }
+  
+  .logo span {
+    color: #ff0000;
+  }
+  
+  .return-buttom  {
+    width: 50px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 32px;
+    font-size: 12px;
+    color: #f0f0f0;
+  }
+  .image{
+    width: 500px;
+  }
+  /* Contenedor de la barra de búsqueda */
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 0;
+  background-color: #f8f8f8; /* Fondo claro para separar visualmente */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para destacarla */
+  border-bottom: 1px solid #ddd;
+}
+
+/* Estilo de la barra de búsqueda */
+.search-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #fff;
+  padding: 8px 15px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Ancho responsivo */
+  max-width: 600px; /* Limita el tamaño máximo */
+}
+
+#search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background-color: transparent;
+}
+
+#search-input::placeholder {
+  color: #888;
+}
+
+#search-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.search-icon {
+  height: 20px;
+  width: 20px;
+}
+
+
+  /* Sección principal */
+.main-section {
+  display: flex; /* Alinea elementos horizontalmente */
+  align-items: center; /* Centra verticalmente los elementos */
+  justify-content: space-between; /* Deja espacio entre contenido */
+  background: linear-gradient(to bottom, #1c1c1c, #333); /* Degradado de negro a gris oscuro */
+  color: #fff; /* Texto en blanco */
+  padding: 30px; /* Espaciado interno */
+  margin: 20px auto; /* Centra la sección horizontalmente */
+  border-radius: 15px; /* Bordes redondeados */
+  max-width: 1200px; /* Ancho máximo para la sección */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para resaltar la sección */
+}
+
+.brand-logo {
+  height: 70px; /* Tamaño ajustado del logotipo */
+  margin-bottom: 15px; /* Espaciado debajo del logo */
+}
+
+.car-description {
+  flex: 1; /* El texto ocupa más espacio disponible */
+  margin-right: 20px; /* Espaciado entre el texto y la imagen */
+}
+
+.car-description h1 {
+  font-size: 36px; /* Tamaño del título */
+  color: #fdd835; /* Amarillo similar al logo de Ferrari */
+  margin-bottom: 15px; /* Espaciado debajo del título */
+}
+
+.car-description p {
+  font-size: 16px; /* Tamaño del texto */
+  line-height: 1.6; /* Espaciado entre líneas */
+  margin-bottom: 20px; /* Espaciado inferior */
+}
+
+.car-model-logo {
+  display: block;
+  margin: 20px 0 0; /* Margen superior para separarlo del texto */
+  max-width: 200px; /* Ajusta el tamaño del logo */
+}
+
+.car-image {
+  max-width: 500px; /* Ancho máximo de la imagen */
+  height: auto; /* Mantiene la proporción */
+  border-radius: 10px; /* Bordes redondeados */
+}
+
+
+  
+ /* Contenedor general del menú de marcas */
+.brands-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centra los elementos horizontalmente */
+  background-color: #000; /* Fondo negro */
+  padding: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%; /* Se adapta al ancho de la pantalla */
+  max-width: 1000px; /* Tamaño máximo del contenedor */
+  margin: 20px auto; /* Centra el menú en la página */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Botones de navegación */
+.nav-btn {
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  height: 40px;
+  width: 40px;
+  position: absolute; /* Coloca los botones fuera del flujo normal */
+  top: 50%;
+  transform: translateY(-50%); /* Centra los botones verticalmente */
+}
+
+.left-btn {
+  left: 10px; /* Coloca el botón izquierdo al inicio */
+}
+
+.right-btn {
+  right: 10px; /* Coloca el botón derecho al final */
+}
+
+.nav-btn:hover {
+  background-color: #666;
+}
+
+/* Contenedor para el scroll horizontal */
+.brands-container {
+  display: flex;
+  overflow-x: auto; /* Scroll horizontal activado */
+  gap: 20px;
+  flex-grow: 1; /* Ocupa todo el espacio disponible entre los botones */
+  padding: 10px 0;
+  scrollbar-width: thin;
+  scrollbar-color: #666 #222; /* Colores del scroll */
+  justify-content: center; /* Centra las marcas dentro del contenedor */
+}
+
+.brands-container::-webkit-scrollbar {
+  height: 8px; /* Altura del scroll */
+}
+
+.brands-container::-webkit-scrollbar-thumb {
+  background-color: #666;
+  border-radius: 4px;
+}
+
+.brands-container::-webkit-scrollbar-track {
+  background-color: #222;
+}
+
+/* Estilo de los logos */
+.brands {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Espaciado uniforme entre los logos */
+}
+
+.brands img {
+  height: 50px; /* Tamaño adecuado para los logos */
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.brands img:hover {
+  transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+}
+
+  
+/* Sección de la galería */
+.car-gallery {
+  padding: 20px; /* Espaciado interno */
+  background-color: #000; /* Fondo negro para la galería */
+  text-align: center; /* Centra el contenido de la galería */
+}
+
+.filter-btn {
+  background-color: #ccc; /* Fondo del botón "Filtrar" */
+  border: none; /* Sin bordes */
+  padding: 10px 20px; /* Espaciado interno */
+  margin-bottom: 20px; /* Espaciado inferior */
+  cursor: pointer; /* Cursor interactivo */
+  border-radius: 5px; /* Bordes redondeados */
+  color: #000; /* Color del texto */
+  font-weight: bold; /* Negrita */
+}
+
+/* Contenedor de las tarjetas */
+.car-cards {
+  display: flex; /* Flexbox para alinear las tarjetas en fila */
+  justify-content: center; /* Centrar las tarjetas horizontalmente */
+  flex-wrap: wrap; /* Permitir que las tarjetas pasen a otra fila si no caben */
+  gap: 20px; /* Espaciado entre las tarjetas */
+}
+
+/* Estilo individual de las tarjetas */
+.car-card {
+  background: #ccc; /* Fondo gris claro (color uniforme para la tarjeta y el logo) */
+  border-radius: 10px; /* Bordes redondeados */
+  text-align: center; /* Centrar contenido */
+  padding: 20px; /* Espaciado interno */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+  max-width: 300px; /* Ancho máximo */
+  width: 100%; /* Ancho completo */
+  color: #000; /* Color del texto */
+}
+
+
+/* Contenedor del logo */
+.car-logo {
+  width: 100%; /* Todo el ancho de la tarjeta */
+  height: 80px; /* Altura del área del logo */
+  margin-bottom: 10px; /* Espaciado debajo del logo */
+  display: flex; /* Flexbox para centrar el logo */
+  align-items: center; 
+  justify-content: center;
+  background: #ccc; /* Mismo color que el fondo de la tarjeta */
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra interna */
+}
+
+/* Estilo de la imagen del logo */
+.car-logo img {
+  max-height: 60px; /* Altura máxima */
+  max-width: 80%; /* Ancho máximo */
+  object-fit: contain; /* Mantener proporciones */
+}
+
+/* Imagen del auto */
+.car-card img {
+  width: 100%; /* Imagen ocupa todo el ancho disponible */
+  border-radius: 10px; /* Bordes redondeados */
+  margin-top: 10px; /* Espaciado superior */
+}
+
+/* Texto del título */
+.car-card h2 {
+  font-size: 18px; /* Tamaño del título */
+  margin: 10px 0; /* Espaciado vertical */
+  font-weight: bold; /* Negrita */
+}
+
+/* Texto de la descripción */
+.car-card p {
+  font-size: 14px; /* Tamaño del texto descriptivo */
+  color: #333; /* Color de texto */
+}
+
+/* footer */
+.footer-text {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-top: 30px;
+  font-style: italic;
+}
+
+.footer {
+  background: #f8f8f8;
+  padding: 1rem;
+  text-align: center;
+}
+  
